@@ -5,13 +5,13 @@ import Container from "./components/Container/Container";
 import Navigation from "./components/Navigation/Navigation";
 import Loader from "react-loader-spinner";
 
-const TrendingMovies = lazy(() =>
+const HomePage = lazy(() =>
   import(
-    "./components/TrendingMovies/TrendingMovies" /* webpackChunkName: 'trendingMovies' */
+    "./components/HomePage/HomePage" /* webpackChunkName: 'trendingMovies' */
   )
 );
-const Movies = lazy(() =>
-  import("./components/Movies/Movies" /* webpackChunkName: 'movies' */)
+const MoviesPage = lazy(() =>
+  import("./components/MoviesPage/MoviesPage" /* webpackChunkName: 'movies' */)
 );
 const MovieDetails = lazy(() =>
   import(
@@ -26,10 +26,10 @@ function App() {
       <Suspense fallback={<Loader type="ThreeDots" color="crimson" />}>
         <Switch>
           <Route path="/" exact>
-            <TrendingMovies />
+            <HomePage />
           </Route>
           <Route path="/movies" exact>
-            <Movies />
+            <MoviesPage />
           </Route>
           <Route path="/movies/:id">
             <MovieDetails />

@@ -16,8 +16,8 @@ import {
 } from "../../services/movies-api";
 
 import MovieCard from "../MovieCard/MovieCard";
-import CastList from "../CastList/CastList";
-import ReviewList from "../ReviewList/ReviewList";
+import CastList from "../Cast/Cast";
+import ReviewList from "../Review/Review";
 import styles from "./MovieDetails.module.css";
 import NoMovie from "../NoMovie/NoMovie";
 

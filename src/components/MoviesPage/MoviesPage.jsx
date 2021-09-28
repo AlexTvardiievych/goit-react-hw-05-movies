@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
-import styles from "./Movies.module.css";
+import styles from "./MoviesPage.module.css";
 import { fetchMovieByName } from "../../services/movies-api";
 import MovieList from "../MovieList/MovieList";
 import toast, { Toaster } from "react-hot-toast";
