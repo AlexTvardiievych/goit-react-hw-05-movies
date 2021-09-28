@@ -18,7 +18,9 @@ function Movies() {
   }, [location.search]);
 
   useEffect(() => {
-    if (!value) return;
+    if (!value)
+      return;
+
     fetchMovieByName(value).then((movies) => {
       if (movies.length === 0) toast.error("Please type correct movie name");
       setMovies(movies);
